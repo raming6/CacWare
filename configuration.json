@@ -1,0 +1,9 @@
+{
+  "Blacklist": ["Jimmy123", "Kim"],
+  "Version": "2.6.5",
+  "Announcement": "",
+  "Keyless": false,
+  "PatchedGames": [
+    12137249458
+  ]
+}
