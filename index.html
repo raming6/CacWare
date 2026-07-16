@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CacWare</title>
+
+        <meta charset = "utf-8">
+		<link rel = "shortcut icon" type = "image/x-icon" href="CacWarePNG.png" />
+
+		<meta name = "author" content = "CacWare" />
+		<meta name = "description" content = "CacWare" />
+		<meta name = "keywords" content = "Cac, Ware, CacWare, script, lua, krnl" />
+
+		<meta property = "og:title" content = "CacWare" />
+		<meta property = "og:description" content = "Official website for CacWare" />
+		<meta property = "og:type" content = "website" />
+		<meta property = "og:url" content = "https://ramingcactus.xyz" />
+		<meta property = "og:secure_url" content = "https://ramingcactus.xyz">
+		<meta property = "og:image" content = "https://ramingcactus.xyz/CacWarePNG.png" />
+
+        <style>
+            body {
+				background-color: rgb(25, 25, 25);
+                color: white;
+                font-family: "Trebuchet MS";
+                background-image: url("https://www.ramingcactus.xyz/CacWareGamePlayBlurred.jpg");
+				background-attachment: fixed;
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+
+            body::-webkit-scrollbar {
+                width: 12px;
+            }
+      
+            body::-webkit-scrollbar-thumb {
+                background-color: rgb(80, 80, 80);
+            }
+
+            #cacware_logo {
+                margin-top: 20px;
+                height: 90px;
+            }
+
+            #scriptBtn {
+                color: rgb(255, 255, 255);
+                background-color: rgb(45, 45, 45);
+                margin-top: 45px;
+                border: 0px;
+                border-radius: 5px;
+                cursor: pointer;
+                width: 650px;
+                height: 35px;
+            }
+
+            #copyPopup {
+                color: rgb(0, 0, 0);
+                background-color: rgb(255, 255, 255);
+                border: 0px;
+                border-radius: 4px;
+                text-align: center;
+                position: absolute;
+                display: none;
+                width: 150px;
+                height: 35px;
+            }
+
+            #gamesBtn {
+                background-color: rgb(45, 45, 45); 
+                color: rgb(255, 255, 255); 
+                font-size: large; 
+                border: 0px; 
+                border-radius: 2px;
+                cursor: pointer; 
+                width: 100px; 
+                height: 50px;
+            }
+
+            #discordBtn {
+                background-color: rgb(114, 137, 218); 
+                color: rgb(255, 255, 255); 
+                font-size: large; 
+                border: 0px; 
+                border-radius: 2px;
+                cursor: pointer; 
+                width: 100px; 
+                height: 50px;
+            }
+
+            #detailLine {
+                margin-top: 45px;
+                border: 1px solid rgb(255,255,255);
+                width: 500px;
+                height: 0px;
+            }
+
+            #copyBtn:hover {
+                background-color: rgb(70, 70, 70);
+            }
+        </style>
+    </head>
+    <body>
+        <input type="text" value="Copied to clipboard!" readonly id="copyPopup">
+        <center>
+            <img src="https://ramingcactus.xyz/CacWarePNG.png" alt="CacWare Logo" id="cacware_logo">
+            <br>
+            <button id="scriptBtn"><span style="color: rgb(78, 153, 204);">loadstring</span>(game:<span style="color: rgb(78, 153, 204);">HttpGet</span>(<span style="color: rgb(80, 179, 179);">"</span><span style="color: rgb(149, 199, 144);">https://raming6.github.io/CacWare/main.lua</span><span style="color: rgb(80, 179, 179);">"</span>))();</button>
+            <br>
+            <div id="detailLine"></div>
+            <br>
+            <h1 style="font-family: monospace;">What is CacWare?</h1>
+            <i style="color: rgb(180, 180, 180);"><span style="color: rgb(0,0,0);">Cac</span> <span style="color: rgb(0,0,0);">Ware</span> is a <span style="color: rgb(0, 192, 80);">free</span> Roblox script hub developed by <span style="color: rgb(255, 255, 255);">ramingcactus</span>.<br>It currently has 10+ games. It is made to be executed on Roblox exploits. It was tested on the exploits that are shown below.</i>
+            <div id="detailLine"></div>
+            <br>
+            <h1 style="font-family: monospace;">Exploits</h1>
+            <i style="color: rgb(180, 180, 180);">
+            <a href="https://potassium.pro/" target="_blank" style="color: rgb(180, 180, 180);">Potassium</a>
+            <br><br>
+            <a href="https://volt.bz/" target="_blank" style="color: rgb(180, 180, 180);">Volt</a>
+            <br><br>
+            <a href="https://getwave.gg/" target="_blank" style="color: rgb(180, 180, 180);">Wave</a>
+            <br><br>
+            <a href="https://z.synapse.do/" target="_blank" style="color: rgb(180, 180, 180);">Synapse Z</a>
+            <br><br>
+            <a href="https://seliware.com/" target="_blank" style="color: rgb(180, 180, 180);">Seliware</a>
+            </i>
+            <div id="detailLine"></div>
+            <h1 style="font-family: monospace; color: rgb(114, 137, 218);">Discord</h1>
+            <button id="discordBtn">JOIN</button>
+            <br>
+            <br>
+            <br>
+        </center>
+
+        <script type="text/javascript">
+            const scriptBtn = document.getElementById("scriptBtn");
+            const copyPopup = document.getElementById("copyPopup");
+            const gamesBtn = document.getElementById("gamesBtn");
+            const discordBtn = document.getElementById("discordBtn");
+
+            scriptBtn.addEventListener("click", () => {
+                const scriptBox = document.createElement("textarea");
+                scriptBox.value = 'loadstring(game:HttpGet("https://raming6.github.io/CacWare/main.lua"))();';
+                document.body.appendChild(scriptBox);
+                scriptBox.select();
+                document.execCommand("copy");
+                document.body.removeChild(scriptBox);
+                copyPopup.style.display = "block";
+                setTimeout(() => {copyPopup.style.display = "none";}, 1000);
+            });
+
+            discordBtn.addEventListener("click", () => {
+                window.open("https://discord.gg/7gRaDK6hum");
+            });
+        </script>
+    </body>
+</html>
